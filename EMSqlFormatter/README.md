@@ -1,5 +1,7 @@
 # EM Sql Formatter 1.1.4
 
+[English overview](../README.md) | [Resumen en español](../README.es.md)
+
 Formateador T-SQL configurable para SQL Server Management Studio 21.
 
 ## Comandos en SSMS

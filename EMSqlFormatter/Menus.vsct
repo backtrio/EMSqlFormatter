@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidEMSqlFormatterPackage">
+
+    <Menus>
+      <Menu guid="guidEMSqlFormatterCmdSet"
+            id="EMSqlFormatterToolbar"
+            type="Toolbar">
+        <CommandFlag>DefaultDocked</CommandFlag>
+        <Strings>
+          <ButtonText>EM Sql Formatter</ButtonText>
+          <CommandName>EM Sql Formatter</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Groups>
+      <Group guid="guidEMSqlFormatterCmdSet"
+             id="EMSqlFormatterGroup"
+             priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+      </Group>
+
+      <Group guid="guidEMSqlFormatterCmdSet"
+             id="EMSqlFormatterToolbarGroup"
+             priority="0x0000">
+        <Parent guid="guidEMSqlFormatterCmdSet"
+                id="EMSqlFormatterToolbar" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidEMSqlFormatterCmdSet"
+              id="cmdidFormatSelection"
+              priority="0x0100"
+              type="Button">
+        <Parent guid="guidEMSqlFormatterCmdSet"
+                id="EMSqlFormatterGroup" />
+        <Icon guid="guidEMSqlFormatterImages" id="bmpFormatSelection" />
+        <Strings>
+          <ButtonText>Beautify SQL - Selección</ButtonText>
+          <CommandName>EMSqlFormatter.FormatSelection</CommandName>
+        </Strings>
+      </Button>
+
+      <Button guid="guidEMSqlFormatterCmdSet"
+              id="cmdidFormatDocument"
+              priority="0x0101"
+              type="Button">
+        <Parent guid="guidEMSqlFormatterCmdSet"
+                id="EMSqlFormatterGroup" />
+        <Icon guid="guidEMSqlFormatterImages" id="bmpFormatDocument" />
+        <Strings>
+          <ButtonText>Beautify SQL - Documento</ButtonText>
+          <CommandName>EMSqlFormatter.FormatDocument</CommandName>
+        </Strings>
+      </Button>
+
+      <Button guid="guidEMSqlFormatterCmdSet"
+              id="cmdidOpenOptions"
+              priority="0x0200"
+              type="Button">
+        <Parent guid="guidEMSqlFormatterCmdSet"
+                id="EMSqlFormatterGroup" />
+        <Icon guid="guidEMSqlFormatterImages" id="bmpOpenOptions" />
+        <Strings>
+          <ButtonText>Configurar EM Sql Formatter...</ButtonText>
+          <CommandName>EMSqlFormatter.OpenOptions</CommandName>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidEMSqlFormatterImages"
+              href="Resources\EMSqlFormatterToolbar.png"
+              usedList="bmpFormatSelection,bmpFormatDocument,bmpOpenOptions" />
+    </Bitmaps>
+
+  </Commands>
+
+  <CommandPlacements>
+    <CommandPlacement guid="guidEMSqlFormatterCmdSet"
+                      id="cmdidFormatSelection"
+                      priority="0x0100">
+      <Parent guid="guidEMSqlFormatterCmdSet"
+              id="EMSqlFormatterToolbarGroup" />
+    </CommandPlacement>
+
+    <CommandPlacement guid="guidEMSqlFormatterCmdSet"
+                      id="cmdidFormatDocument"
+                      priority="0x0110">
+      <Parent guid="guidEMSqlFormatterCmdSet"
+              id="EMSqlFormatterToolbarGroup" />
+    </CommandPlacement>
+
+    <CommandPlacement guid="guidEMSqlFormatterCmdSet"
+                      id="cmdidOpenOptions"
+                      priority="0x0200">
+      <Parent guid="guidEMSqlFormatterCmdSet"
+              id="EMSqlFormatterToolbarGroup" />
+    </CommandPlacement>
+  </CommandPlacements>
+
+  <Symbols>
+    <GuidSymbol name="guidEMSqlFormatterPackage"
+                value="{ca40bbd5-c3e6-4aab-8922-bff7087ccf01}" />
+
+    <GuidSymbol name="guidEMSqlFormatterCmdSet"
+                value="{4c10404c-f9f3-475e-9bb5-1301d4384735}">
+      <IDSymbol name="EMSqlFormatterGroup" value="0x1020" />
+      <IDSymbol name="EMSqlFormatterToolbar" value="0x1050" />
+      <IDSymbol name="EMSqlFormatterToolbarGroup" value="0x1060" />
+      <IDSymbol name="cmdidFormatSelection" value="0x0100" />
+      <IDSymbol name="cmdidFormatDocument" value="0x0101" />
+      <IDSymbol name="cmdidOpenOptions" value="0x0102" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidEMSqlFormatterImages"
+                value="{be8a7d46-248a-49b5-8f47-9dc1ceb08357}">
+      <IDSymbol name="bmpFormatSelection" value="1" />
+      <IDSymbol name="bmpFormatDocument" value="2" />
+      <IDSymbol name="bmpOpenOptions" value="3" />
+    </GuidSymbol>
+  </Symbols>
+
+</CommandTable>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0"
+                 xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011"
+                 xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="EM.SqlFormatter"
+              Version="1.1.4"
+              Language="es-CL"
+              Publisher="EM" />
+    <DisplayName>EM Sql Formatter</DisplayName>
+    <Description xml:space="preserve">Formateador T-SQL configurable y seguro para SQL Server Management Studio 21.</Description>
+    <Tags>SSMS, SQL, T-SQL, Formatter, Beautify</Tags>
+  </Metadata>
+
+  <Installation AllUsers="false">
+    <InstallationTarget Id="Microsoft.VisualStudio.Ssms" Version="[21.0,22.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+    </InstallationTarget>
+  </Installation>
+
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP"
+                DisplayName="Microsoft .NET Framework"
+                d:Source="Manual"
+                Version="[4.7.2,)" />
+  </Dependencies>
+
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor"
+                  Version="[17.0,18.0)"
+                  DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage"
+           d:Source="Project"
+           d:ProjectName="%CurrentProject%"
+           Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>

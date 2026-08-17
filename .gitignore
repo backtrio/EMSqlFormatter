@@ -1,0 +1,14 @@
+.vs/
+
+**/[Bb]in/
+**/[Oo]bj/
+TestResults/
+
+*.user
+*.suo
+*.cache
+*.log
+*.pdb
+*.vsix
+*.rar
+
